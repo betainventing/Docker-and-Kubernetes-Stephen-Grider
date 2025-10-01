@@ -1,0 +1,196 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32> get-vm
+
+Name                       State CPUUsage(%) MemoryAssigned(M) Uptime   Status             Version
+----                       ----- ----------- ----------------- ------   ------             -------
+0.1.win-11-pro-template    Off   0           0                 00:00:00 Operating normally 12.0
+0.2.ubuntu-25              Off   0           0                 00:00:00 Operating normally 12.0
+0.4.debian-12-template     Off   0           0                 00:00:00 Operating normally 12.0
+1a.win-11-pro-ELK          Off   0           0                 00:00:00 Operating normally 12.0
+1b.win11-Azure-Labs        Off   0           0                 00:00:00 Operating normally 12.0
+1c.win11-wordpress         Off   0           0                 00:00:00 Operating normally 12.0
+1d.win11-MySQL-docker-k8s  Off   0           0                 00:00:00 Operating normally 12.0
+3a.ubuntu-24.04.3-MySQL    Off   0           0                 00:00:00 Operating normally 12.0
+4.debian-12-linux-practice Off   0           0                 00:00:00 Operating normally 12.0
+
+
+PS C:\WINDOWS\system32>
+>> Get-VM -Name "YourVMName" | Format-List *^C
+PS C:\WINDOWS\system32> Get-VM -Name "0.1.win-11-pro-template"
+
+Name                    State CPUUsage(%) MemoryAssigned(M) Uptime   Status             Version
+----                    ----- ----------- ----------------- ------   ------             -------
+0.1.win-11-pro-template Off   0           0                 00:00:00 Operating normally 12.0
+
+
+PS C:\WINDOWS\system32> Get-VM -Name "0.1.win-11-pro-template" | Format-List *
+
+
+ParentCheckpointId                  : 3e12ad84-e99b-47e2-a76a-40269c676da6
+ParentCheckpointName                : Automatic Checkpoint - 0.1.win-11-pro-template - (01-10-2025 - 10:55:52)
+VMName                              : 0.1.win-11-pro-template
+VMId                                : d6b0bfa6-a878-4102-b624-ceefa81adf42
+CheckpointFileLocation              : C:\ProgramData\Microsoft\Windows\Hyper-V
+ConfigurationLocation               : C:\ProgramData\Microsoft\Windows\Hyper-V
+GuestStatePath                      : C:\ProgramData\Microsoft\Windows\Hyper-V\Virtual Machines\D6B0BFA6-A878-4102-B624-CEEFA81ADF42.vmgs
+SmartPagingFileInUse                : False
+SmartPagingFilePath                 : C:\ProgramData\Microsoft\Windows\Hyper-V
+SnapshotFileLocation                : C:\ProgramData\Microsoft\Windows\Hyper-V
+AutomaticStartAction                : StartIfRunning
+AutomaticStartDelay                 : 0
+AutomaticStopAction                 : Save
+AutomaticCriticalErrorAction        : Pause
+AutomaticCriticalErrorActionTimeout : 30
+AutomaticCheckpointsEnabled         : True
+CPUUsage                            : 0
+MemoryAssigned                      : 0
+MemoryDemand                        : 0
+MemoryStatus                        :
+NumaAligned                         :
+NumaNodesCount                      : 1
+NumaSocketCount                     : 1
+Heartbeat                           :
+IntegrationServicesState            :
+IntegrationServicesVersion          : 0.0
+Uptime                              : 00:00:00
+OperationalStatus                   : {Ok}
+PrimaryOperationalStatus            : Ok
+SecondaryOperationalStatus          :
+StatusDescriptions                  : {Operating normally}
+PrimaryStatusDescription            : Operating normally
+SecondaryStatusDescription          :
+Status                              : Operating normally
+ReplicationHealth                   : NotApplicable
+ReplicationMode                     : None
+ReplicationState                    : Disabled
+ResourceMeteringEnabled             : False
+CheckpointType                      : Standard
+EnhancedSessionTransportType        : VMBus
+Groups                              : {}
+Version                             : 12.0
+VirtualMachineType                  : RealizedVirtualMachine
+VirtualMachineSubType               : Generation2
+GuestStateIsolationType             : Disabled
+Notes                               :
+State                               : Off
+ComPorts                            : {COM 1, COM 2}
+ComPort1                            : VMComPort (Name = 'COM 1', VMName = '0.1.win-11-pro-template') [Id =
+                                      'Microsoft:D6B0BFA6-A878-4102-B624-CEEFA81ADF42\8E3A359F-559A-4B6A-98A9-1690A6100ED7\0', VMId = 'd6b0bfa6-a878-4102-b624-ceefa81adf42']
+ComPort2                            : VMComPort (Name = 'COM 2', VMName = '0.1.win-11-pro-template') [Id =
+                                      'Microsoft:D6B0BFA6-A878-4102-B624-CEEFA81ADF42\8E3A359F-559A-4B6A-98A9-1690A6100ED7\1', VMId = 'd6b0bfa6-a878-4102-b624-ceefa81adf42']
+DVDDrives                           : {}
+FibreChannelHostBusAdapters         : {}
+FloppyDrive                         :
+HardDrives                          : {Hard Drive on SCSI controller number 0 at location 0}
+RemoteFxAdapter                     :
+VMIntegrationService                : {Guest Service Interface, Heartbeat, Key-Value Pair Exchange, Shutdown...}
+DynamicMemoryEnabled                : True
+MemoryMaximum                       : 1099511627776
+MemoryMinimum                       : 536870912
+MemoryStartup                       : 8589934592
+ProcessorCount                      : 11
+BatteryPassthroughEnabled           : True
+Generation                          : 2
+IsClustered                         : False
+ParentSnapshotId                    : 3e12ad84-e99b-47e2-a76a-40269c676da6
+ParentSnapshotName                  : Automatic Checkpoint - 0.1.win-11-pro-template - (01-10-2025 - 10:55:52)
+Path                                : C:\ProgramData\Microsoft\Windows\Hyper-V
+SizeOfSystemFiles                   : 73728
+GuestControlledCacheTypes           : False
+LowMemoryMappedIoSpace              : 134217728
+HighMemoryMappedIoSpace             : 536870912
+HighMemoryMappedIoBaseAddress       : 68182605824
+LockOnDisconnect                    : Off
+CreationTime                        : 07-06-2025 14:13:49
+Id                                  : d6b0bfa6-a878-4102-b624-ceefa81adf42
+Name                                : 0.1.win-11-pro-template
+NetworkAdapters                     : {Network Adapter}
+CimSession                          : CimSession: .
+ComputerName                        : TECHDJIN-I9
+IsDeleted                           : False
+
+
+
+PS C:\WINDOWS\system32> get
+get : The term 'get' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path
+is correct and try again.
+At line:1 char:1
++ get
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (get:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> get-vm
+
+Name                       State CPUUsage(%) MemoryAssigned(M) Uptime   Status             Version
+----                       ----- ----------- ----------------- ------   ------             -------
+0.1.win-11-pro-template    Off   0           0                 00:00:00 Operating normally 12.0
+0.2.ubuntu-25              Off   0           0                 00:00:00 Operating normally 12.0
+0.4.debian-12-template     Off   0           0                 00:00:00 Operating normally 12.0
+1a.win-11-pro-ELK          Off   0           0                 00:00:00 Operating normally 12.0
+1b.win11-Azure-Labs        Off   0           0                 00:00:00 Operating normally 12.0
+1c.win11-wordpress         Off   0           0                 00:00:00 Operating normally 12.0
+1d.win11-MySQL-docker-k8s  Off   0           0                 00:00:00 Operating normally 12.0
+3a.ubuntu-24.04.3-MySQL    Off   0           0                 00:00:00 Operating normally 12.0
+4.debian-12-linux-practice Off   0           0                 00:00:00 Operating normally 12.0
+
+
+PS C:\WINDOWS\system32>
+>> Set-VMProcessor -VMName "0.1.win-11-pro-template" -ExposeVirtualizationExtensions $true^C
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> Set-VMProcessor -VMName "1d.win11-MySQL-docker-k8s" -exp^C
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+>> Get-VM | Select-Object Name, State, @{Name="NestedVirtualization";Expression={(Get-VMProcessor $_.Name).ExposeVirtualizationExtensions}}^C
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32> Get-VM | Select-Object Name, State, @{Name="NestedVirtualization";Expression={(Get-VMProcessor $_.Name).ExposeVirtualizationExtensions}}
+
+Name                      State NestedVirtualization
+----                      ----- --------------------
+0.1.win-11-pro-template     Off                False
+0.2.ubuntu-25               Off                False
+0.4.debian-12-template      Off                False
+1a.win-11-pro-ELK           Off                False
+1b.win11-Azure-Labs         Off                False
+1c.win11-wordpress          Off                False
+1d.win11-MySQL-docker-k8s   Off                False
+3a.ubuntu-24.04.3-MySQL     Off                False
+4.debian-12-linux-prac...   Off                False
+
+
+PS C:\WINDOWS\system32> Set-VMProcessor -VMName "1d.win11-MySQL-docker-k8s" -ExposeVirtualizationExtensions $true
+PS C:\WINDOWS\system32> Get-VM | Select-Object Name, State, @{Name="NestedVirtualization";Expression={(Get-VMProcessor $_.Name).ExposeVirtualizationExtensions}}
+
+Name                      State NestedVirtualization
+----                      ----- --------------------
+0.1.win-11-pro-template     Off                False
+0.2.ubuntu-25               Off                False
+0.4.debian-12-template      Off                False
+1a.win-11-pro-ELK           Off                False
+1b.win11-Azure-Labs         Off                False
+1c.win11-wordpress          Off                False
+1d.win11-MySQL-docker-k8s   Off                 True
+3a.ubuntu-24.04.3-MySQL     Off                False
+4.debian-12-linux-prac...   Off                False
+
+
+PS C:\WINDOWS\system32>
+PS C:\WINDOWS\system32>
+>> Get-Content (Get-PSReadLineOption).HistorySavePath | Out-File "C:\Users\YourUser\Documents\commands-only.txt"
+Out-File : Could not find a part of the path 'C:\Users\YourUser\Documents\commands-only.txt'.
+At line:2 char:54
++ ... rySavePath | Out-File "C:\Users\YourUser\Documents\commands-only.txt"
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], DirectoryNotFoundException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+
+PS C:\WINDOWS\system32>
+>> Get-Content (Get-PSReadLineOption).HistorySavePath | Out-File "C:\Users\trainer\Downloads\commands-only.txt"
+PS C:\WINDOWS\system32>
